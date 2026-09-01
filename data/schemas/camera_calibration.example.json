@@ -1,0 +1,8 @@
+{
+  "camera-uuid-example": {
+    "pixels_per_meter": 12.5,
+    "counting_line_y": 340,
+    "flow_direction": [0.0, 1.0],
+    "notes": "Calibrated using lane width of 3.5m measured in reference frame"
+  }
+}

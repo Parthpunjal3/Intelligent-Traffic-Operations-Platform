@@ -1,0 +1,18 @@
+# Default signal-optimization policy configuration.
+# Loaded by the optimizer / scheduler to decide when and how aggressively
+# to re-time signals.
+
+min_recompute_interval_seconds: 60
+max_cycle_seconds: 150
+min_cycle_seconds: 40
+min_green_seconds: 10
+saturation_flow_vph_per_lane: 1800
+lost_time_per_phase_seconds: 4
+
+# Safety guardrails: never change green time by more than this per update,
+# to avoid abrupt jumps that confuse drivers/pedestrians.
+max_green_delta_seconds: 15
+
+# Escalation: if an incident is detected on an approach, hold/extend the
+# opposing phase's green and flag for manual review instead of auto-applying.
+incident_override: true
